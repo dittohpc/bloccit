@@ -1,8 +1,8 @@
 require 'rails_helper'
+include RandomData
 
 RSpec.describe Topic, type: :model do
   let(:topic) { create(:topic) }
-#  let(:public) { true }
 
   it { is_expected.to have_many(:posts)}
   it { is_expected.to have_many(:labelings) }
